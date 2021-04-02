@@ -7,9 +7,8 @@ class DeleteRequest extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts/1", {
-      method: "DELETE",
-    }).then(() => this.setState({ status: "Delete successful" }));
+    fetch("https://jsonplaceholder.typicode.com/posts/1", { method: "DELETE" })
+      .then(() => this.setState({ status: "Delete successful" }));
   }
 
   render() {
