@@ -13,7 +13,7 @@ class PostRequestErrorHandling extends React.Component {
       body: JSON.stringify({ title: "React POST Request Example" }),
     };
     fetch("https://jsonplaceholder.typicode.com/invalid-url", requestOptions)
-      .then(async (response) => {
+      .then(async response => {
         const data = await response.json();
 
         //check for error response
@@ -25,7 +25,7 @@ class PostRequestErrorHandling extends React.Component {
 
         this.setState({ articleId: data.id });
       })
-      .catch((error) => {
+      .catch(error => {
         this.setState({ errorMessage: error });
         console.error("There was an error", error);
       });
