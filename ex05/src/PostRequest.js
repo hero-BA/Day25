@@ -13,8 +13,8 @@ class PostRequest extends React.Component {
       body: JSON.stringify({ title: "React POST Request Example" }),
     };
     fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
-      .then((response) => response.json())
-      .then((data) => this.setState({ articleId: data.id }));
+      .then(response => response.json())
+      .then(data => this.setState({ articleId: data.id }));
   }
 
   render() {
